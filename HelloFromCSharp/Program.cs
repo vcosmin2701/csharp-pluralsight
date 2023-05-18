@@ -1,33 +1,21 @@
-﻿// C# Sprint learning
+﻿DateTime hireDate = new DateTime(2023, 5, 22, 15, 30, 0);
+Console.WriteLine(hireDate);
 
-double ratePerHour = 12.34;
-int numberOfHoursWorked = 165;
-int bonus = 100;
+DateTime exitDate = new DateTime(2030, 10, 11);
+//DateTime invalidDate = new DateTime(2032, 15, 11);
 
-double currentMonthWage = ratePerHour * numberOfHoursWorked+bonus;
-Console.WriteLine(currentMonthWage);
+DateTime startDate = hireDate.AddDays(3);
+Console.WriteLine(startDate);
 
-ratePerHour += 3; //ratePerHour = ratePerHour + 3;
+DateTime currentDate = DateTime.Now;
+Console.WriteLine(currentDate);
 
-if(currentMonthWage > 2000)
-{
-	Console.WriteLine("Top paid employee");
-}
+bool areWeInDst = currentDate.IsDaylightSavingTime();
+Console.WriteLine(areWeInDst);
 
-int numberOfEmployees = 15;
-numberOfEmployees--;
+DateTime startHour = DateTime.Now;
+TimeSpan workTime = new TimeSpan(8, 35, 0);
+DateTime endHour = startHour.Add(workTime);
 
-bool a;
-int b;
-
-int intMaxValue = int.MaxValue;
-int intMinValue = int.MinValue;
-
-char userSelection = 'a';
-char upperVersion = char.ToUpper(userSelection);
-
-bool isDigit = char.IsDigit(userSelection);
-bool isLetter = char.IsLetter(userSelection);
-
-Console.ReadLine();
- 
+Console.WriteLine("Start hour: " + startHour.ToLongDateString());
+Console.WriteLine("End hour: " + endHour.ToLongDateString());
