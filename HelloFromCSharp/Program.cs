@@ -1,5 +1,6 @@
-﻿int numberOfHoursWorked = 165;
-long conversion = numberOfHoursWorked; // works fine
+﻿var monthlyWage = 1234;
+var isActive = true;
+var rating = 99.25;
+// type is inferred;
 
-double d = 123456789.0;
-int x = (int) d;
+var hireDate = new DateTime(2025, 10, 24);
