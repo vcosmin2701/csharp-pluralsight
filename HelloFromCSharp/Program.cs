@@ -20,7 +20,14 @@ numberOfEmployees--;
 bool a;
 int b;
 
-Console.WriteLine();
+int intMaxValue = int.MaxValue;
+int intMinValue = int.MinValue;
 
+char userSelection = 'a';
+char upperVersion = char.ToUpper(userSelection);
 
+bool isDigit = char.IsDigit(userSelection);
+bool isLetter = char.IsLetter(userSelection);
+
+Console.ReadLine();
  
