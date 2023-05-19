@@ -8,6 +8,61 @@ namespace HelloFromCSharp
 {
 	internal class Utilities
 	{
+		public static string RemoveVowels(string input)
+		{
+			for (int i = 0; i < input.Length; i++)
+			{
+				if (input[i] == 'a')
+				{
+					input = input.Replace(input[i], '\0');
+				}
+				else if (input[i] == 'e')
+				{
+					input = input.Replace(input[i], '\0');
+				}
+				else if (input[i] == 'i')
+				{
+					input = input.Replace(input[i], '\0');
+				}
+				else if (input[i] == 'o')
+				{
+					input = input.Replace(input[i], '\0');
+				}
+				else if (input[i] == 'u')
+				{
+					input = input.Replace(input[i], '\0');
+				}
+				else if (input[i] == 'y')
+				{
+					input = input.Replace(input[i], '\0');
+				}
+			}
+			return input;
+		}
+
+		public static void ManipulatingStrings()
+		{
+			string firstName = "Vladut";
+			string lastName = "Cosmin";
+
+			string fullName = firstName + " " + lastName;
+			string employeeIdentification = String.Concat(firstName, lastName);
+
+			string empId = firstName.ToLower() + "-" + lastName.Trim().ToLower();
+
+			int length = empId.Length;
+
+			if (fullName.Contains("cosm") || (fullName.Contains("Cosm")))
+			{
+				Console.WriteLine("It's Cosmo right here");
+			}
+
+			string subString = fullName.Substring(1, 3);
+			Console.WriteLine(subString);
+
+			string userNameWithStringInterpolation = $"{firstName}-{lastName}";
+			Console.WriteLine(userNameWithStringInterpolation);
+		}
 
 		public static void UsingExpressionBodiedSyntax()
 		{
