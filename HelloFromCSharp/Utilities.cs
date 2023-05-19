@@ -8,6 +8,38 @@ namespace HelloFromCSharp
 {
 	internal class Utilities
 	{
+		public static void ParsingStrings()
+		{
+			Console.WriteLine("Enter the wage: ");
+			string wage = Console.ReadLine();
+			// int wageValue = int.Parse(wage);
+
+			int wageValue;
+			if(int.TryParse(wage, out wageValue))
+			{
+				Console.WriteLine("Parsing success: " + wageValue);
+			}
+			else
+			{
+				Console.WriteLine("Parsing FAILED!");
+			}
+
+			string hireDateString = "12/12/2022";
+			DateTime hireDate = DateTime.Parse(hireDateString);
+			Console.WriteLine("Parsed date: " + hireDate);
+		}
+		public static void UsingStringEquality()
+		{
+			string name1 = "Cosmo";
+			string name2 = "COSMO";
+
+			Console.WriteLine($"Are these two names equal? : {name1 == name2}");
+			Console.WriteLine($"Is name equal to Cosmo ? :  {name1 == "Cosmo"}");
+			Console.WriteLine($"Is name equal to COSMO ?: {name2.Equals("COSMO")}");
+			Console.WriteLine($"Are these names the same ? : {name1.ToLower() == name2.ToLower()}");
+
+		}
+		 
 		public static void UsingEscapeCharacters()
 		{
 			string firstName = "Vladut";
