@@ -8,6 +8,39 @@ namespace HelloFromCSharp
 {
 	internal class Utilities
 	{
+		public static void UsingNamedArguments()
+		{
+			int amount = 1234;
+			int months = 12;
+			int bonus = 500;
+
+			int yearlyWageForEmployee = CalculateYearlyWageWithNamed(bonus: bonus, monthlyWage: amount, numberOfMonthsWorked: months);
+
+			Console.WriteLine($"Yearly wage for employee: {yearlyWageForEmployee}");
+		}
+
+		public static int CalculateYearlyWageWithNamed(int monthlyWage, int numberOfMonthsWorked, int bonus)
+		{
+			Console.WriteLine($"The yearly wage is: {monthlyWage * numberOfMonthsWorked + bonus}");
+			return monthlyWage + numberOfMonthsWorked + bonus;
+		}
+
+		public static void UsingOptionalParameters()
+		{
+			int monthlyWage1 = 1234;
+			int months1 = 12;
+
+			int yearlyWageForEmployee1 = CalculateYearlyWageWithOptional(monthlyWage1, months1, 100);
+			Console.WriteLine($"Yearly wage for employee 1 : {yearlyWageForEmployee1}");
+		}
+
+		public static int CalculateYearlyWageWithOptional(int monthlyWage, int numberOfMonthsWorked, int bonus = 0)
+		{
+			// int local = 100; local scope
+			Console.WriteLine($"The yearly wage is: {monthlyWage * numberOfMonthsWorked + bonus}");
+			return monthlyWage + numberOfMonthsWorked + bonus;
+		}
+
 		public static int CalculateYearlyWage(int monthlyWage, int numberOfMonthsWorked)
 		{
 			// int local = 100; local scope
@@ -16,9 +49,7 @@ namespace HelloFromCSharp
 			{
 				return monthlyWage * (numberOfMonthsWorked + 1);
 			}
-
 			return monthlyWage * numberOfMonthsWorked;
-
 		}
 
 		public static int CalculateYearlyWage(int monthlyWage, int numberOfMonthsWorked, int bonus)
