@@ -15,7 +15,7 @@ int bonus = 1000;
 
 //double yearlyWageWithBonusDouble = Utilities.CalculateYearlyWage(amountDouble, monthsDouble, bonusDouble);
 
-Utilities.UsingNamedArguments();
+Utilities.UsingExpressionBodiedSyntax();
 
 
 
