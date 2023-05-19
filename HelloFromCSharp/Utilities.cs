@@ -8,6 +8,8 @@ namespace HelloFromCSharp
 {
 	internal class Utilities
 	{
+
+
 		public static void ParsingStrings()
 		{
 			Console.WriteLine("Enter the wage: ");
