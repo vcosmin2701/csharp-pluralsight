@@ -8,6 +8,20 @@ namespace HelloFromCSharp
 {
 	internal class Utilities
 	{
+		public static void UsingEscapeCharacters()
+		{
+			string firstName = "Vladut";
+			string lastName = "Cosmin";
+
+			string greeting = $"Welcome!\n{firstName}\t{lastName}";
+			Console.WriteLine(greeting);
+
+			string filePath = "C:\\data\\employeelist.xlsx";
+			string filePathVerbatim = @"C:\data\employeelist.xlsx"; // improves readbility
+			string marketingTagLine = "Making the best \"software\" ever";
+
+			Console.WriteLine($"{filePath}\n{filePathVerbatim}\n{marketingTagLine}");
+		}
 		public static string RemoveVowels(string input)
 		{
 			for (int i = 0; i < input.Length; i++)
