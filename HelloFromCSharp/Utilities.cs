@@ -10,6 +10,7 @@ namespace HelloFromCSharp
 	{
 		public static int CalculateYearlyWage(int monthlyWage, int numberOfMonthsWorked)
 		{
+			// int local = 100; local scope
 			//Console.WriteLine($"Yearly wage: {monthlyWage * numberOfMonthsWorked}");
 			if (numberOfMonthsWorked == 12)
 			{
@@ -22,6 +23,7 @@ namespace HelloFromCSharp
 
 		public static int CalculateYearlyWage(int monthlyWage, int numberOfMonthsWorked, int bonus)
 		{
+			// int local = 100; local scope
 			Console.WriteLine($"The yearly wage is: {monthlyWage * numberOfMonthsWorked + bonus}");
 			return monthlyWage + numberOfMonthsWorked + bonus;
 		}
